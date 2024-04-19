@@ -1,0 +1,133 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #5d3bee;
+    --primary-heading: #080415;
+    --primary-text: #51586a;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.section-heading {
+    color: var(--primary-heading);
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: -2.24px;
+}
+
+.section-desc {
+    color: var(--primary-text);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.66;
+}
+
+.btn {
+    display: inline-block;
+    width: 170px;
+    height: 62px;
+    background: var(--primary-color);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Header */
+.header {
+    padding: 20px 0 22px;
+}
+
+.header > .container {
+    max-width: 1330px;
+}
+
+.header__inner,
+.header__info-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+}
+
+.header__info-img {
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(93, 59, 238, 0.2);
+}
+
+.header__info-email {
+    margin-left: 10px;
+    color: #080415;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.36;
+    text-decoration-line: underline;
+}
+
+.header__info-email:hover {
+    opacity: 0.9;
+}
+
+.header__logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-link {
+    position: relative;
+    padding: 8px 21px;
+    color: var(--primary-text);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.header__nav-link:hover {
+    text-shadow: -0.1px -0.1px currentColor, 0.1px 0.1px currentColor;
+}
+
+.header__nav-link:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.header__nav-link::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1.2px;
+    background: var(--primary-color);
+    transition: width 0.4s ease-out;
+}
