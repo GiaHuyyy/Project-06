@@ -41,10 +41,16 @@ a {
 }
 
 .btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 170px;
     height: 62px;
     background: var(--primary-color);
+    color: #fdfdfd;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.66;
 }
 
 .btn:hover {
@@ -54,6 +60,7 @@ a {
 /* Header */
 .header {
     padding: 20px 0 22px;
+    background: #fbfaff;
 }
 
 .header > .container {
@@ -64,7 +71,6 @@ a {
 .header__info-img {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .header__info {
@@ -94,9 +100,14 @@ a {
 }
 
 .header__logo {
+    margin-left: 357px;
     width: 100px;
     height: 100px;
     object-fit: cover;
+}
+
+.header__nav {
+    margin-left: auto;
 }
 
 .header__nav-list {
@@ -123,11 +134,110 @@ a {
 
 .header__nav-link::before {
     position: absolute;
-    content: '';
+    content: "";
     bottom: 0;
     right: 0;
     width: 0;
     height: 1.2px;
     background: var(--primary-color);
     transition: width 0.4s ease-out;
+}
+
+/* Hero */
+.hero {
+    padding-top: 20px;
+    background: #fbfaff;
+}
+
+.hero__inner {
+    display: flex;
+    column-gap: 156px;
+}
+
+/* Hero media */
+.hero__media {
+    position: relative;
+}
+
+.hero__media-wrap-img {
+    width: 514px;
+    height: 705px;
+}
+
+.hero__media-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.hero__media-decor {
+    position: absolute;
+    left: -210px;
+    bottom: 0;
+}
+
+/* Hero content */
+.hero__content {
+    margin-top: 137px;
+}
+.hero__content-heading {
+    font-size: 8rem;
+    line-height: 0.95;
+    letter-spacing: -3.2px;
+}
+
+.hero__content-desc {
+    margin-top: 20px;
+    width: 370px;
+}
+
+.hero__cta {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-top: 50px;
+}
+
+.hero__cta-link {
+    color: #080415;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.66;
+    text-decoration-line: underline;
+    text-decoration-color: #817f8a;
+}
+
+.hero__cta-link:hover {
+    opacity: 0.9;
+}
+/* 160  40*/
+.hero__social {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 104px;
+}
+
+.hero__social-title {
+    font-weight: 500;
+}
+
+.hero__social-list {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.hero__social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(8, 4, 21, 0.2);
+}
+
+.hero__social-item:hover {
+    opacity: 0.8;
 }
