@@ -291,6 +291,7 @@ a {
     display: flex;
     align-items: center;
     column-gap: 13px;
+    color: #080415;
 }
 
 .app__item:hover {
@@ -310,4 +311,64 @@ a {
 
 .app__item-design-up {
     background: #14a800;
+}
+
+/* Specialties */
+.specialties {
+    padding: 40px 0 140px;
+}
+
+.specialties-heading {
+    text-align: center;
+}
+
+.specialties__desc {
+    text-align: center;
+    margin: 20px auto 0;
+    width: 534px;
+}
+
+.specialties__inner-list {
+    margin-top: 60px;
+}
+
+.specialties__item {
+    background: #fbfaff;
+}
+
+.specialties__item {
+    padding: 33px 42px 32px 43px;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.specialties__item:hover {
+    transform: translateY(-20px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.specialties__item-wrap-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 17px;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 1px solid #efeef3;
+}
+
+.specialties__item-title {
+    display: inline-block;
+    margin-top: 22px;
+    color: var(--primary-heading);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -1.28px;
+}
+
+.specialties__item-desc {
+    margin-top: 15px;
+    width: 285px;
 }
