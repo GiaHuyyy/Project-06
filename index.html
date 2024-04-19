@@ -718,11 +718,141 @@
 
                         <!-- Projects btn -->
                         <div class="projects__cta">
-                            <a href="#!" class="btn projects__btn">All Projects</a>
+                            <a href="#!" class="btn projects__btn"
+                                >All Projects</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive, Rating -->
+            <section class="info">
+                <div class="container">
+                    <!-- Interactive -->
+                    <div class="interactive">
+                        <div class="interactive__preamble">
+                            Hey,,,,It’s arif
+                            <img
+                                src="./asset/icons/interactive-icon.svg"
+                                alt=""
+                            />
+                        </div>
+                        <h2 class="section-heading interactive__heading">
+                            Interactive Designer
+                        </h2>
+                        <p class="section-desc interactive__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. In urna, non nisl tincidunt ut elementum
+                            turpis.
+                        </p>
+
+                        <!-- Interactive about -->
+                        <div class="interactive__about">
+                            <!-- Item 1 -->
+                            <div class="interactive__about-item">
+                                <p class="interactive__about-num">08+</p>
+                                <p class="interactive__about-title">
+                                    Years Experience
+                                </p>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="interactive__about-item">
+                                <p class="interactive__about-num">21+</p>
+                                <p class="interactive__about-title">
+                                    Features & Awards
+                                </p>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="interactive__about-item">
+                                <p class="interactive__about-num">97%</p>
+                                <p class="interactive__about-title">
+                                    Clients Rating
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Interactive video -->
+                        <div class="interactive__wrap-video">
+                            <video
+                                id="video"
+                                class="interactive__video"
+                                poster="./asset/thumb/thumb.jpg"
+                                alt="Em cảm ơn anh Sơn và đội ngũ F8 !"
+                                title="Em cảm ơn anh Sơn và đội ngũ F8 !"
+                                src="./asset/videos/Tại_thấy_ý_nghĩa_quá_nên_em_để_ạ.mp4"
+                            ></video>
+                            <!-- Interactive play -->
+                            <div
+                                id="play"
+                                class="interactive__play"
+                                title="Play"
+                            >
+                                <svg
+                                    width="15"
+                                    height="18"
+                                    viewBox="0 0 15 18"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M14.4462 10.6965C14.3614 10.7835 14.0414 11.1555 13.7433 11.4615C11.9956 13.386 7.43643 16.536 5.05017 17.4975C4.68777 17.652 3.77155 17.979 3.28203 18C2.81296 18 2.36581 17.892 1.93911 17.673C1.40721 17.367 0.980516 16.8855 0.746712 16.317C0.596201 15.9225 0.362397 14.742 0.362397 14.721C0.128592 13.4295 0 11.331 0 9.012C0 6.8025 0.128592 4.7895 0.320019 3.4785C0.341939 3.4575 0.575743 1.9905 0.831466 1.488C1.30054 0.57 2.21676 0 3.19727 0H3.28203C3.9206 0.0225 5.26352 0.5925 5.26352 0.6135C7.52119 1.5765 11.9752 4.572 13.7652 6.5625C13.7652 6.5625 14.2694 7.074 14.4886 7.3935C14.8305 7.8525 15 8.421 15 8.9895C15 9.624 14.8086 10.215 14.4462 10.6965Z"
+                                        fill="#5D3BEE"
+                                    />
+                                </svg>
+                            </div>
+                            <!-- Interactive Intro -->
+                            <a href="#!" class="btn interactive__intro">
+                                Intro Video
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating -->
+                <div class="rating">
+                    <div class="container">
+                        <h2 class="section-heading">What people says</h2>
+                        <p class="section-desc rating__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. In urna, non nisl tincidunt ut elementum
+                            turpis.
+                        </p>
+                        <div class="ratting__list">
+                            <p class="rating__quote">
+                                “Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt
+                                in culpa.”
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+        <!-- Js -->
+        <script>
+            const play = document.querySelector("#play");
+            const video = document.querySelector("#video");
+            let i = 0;
+            play.addEventListener("click", () => {
+                playVideo();
+            });
+            video.addEventListener("click", () => {
+                playVideo();
+            });
+            function playVideo() {
+                i++;
+                if (i % 2 !== 0) {
+                    video.play();
+                    play.style.display = "none";
+                } else {
+                    video.pause();
+                    play.style.display = "flex";
+                }
+            }
+        </script>
     </body>
 </html>
