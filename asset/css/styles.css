@@ -411,17 +411,18 @@ a {
     display: flex;
     padding: 24px 23px 23px 34px;
     background: #fbfaff;
-    transition: box-shadow 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.projects__item:hover {
+    transform: translateY(-15px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .projects__item-decor {
     position: absolute;
     top: 0;
     right: 0;
-}
-
-.projects__item:hover {
-    box-shadow: rgba(7, 4, 4, 0.35) 0px 5px 25px;
 }
 
 .projects__content {
@@ -543,13 +544,17 @@ a {
 .interactive__wrap-video {
     position: relative;
     margin-top: 70px;
-    height: 628px;
+    width: 100%;
+    padding-top: 56.25%;
     background: #000;
     z-index: 1;
     cursor: pointer;
 }
 
 .interactive__video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -754,7 +759,8 @@ a {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-50%);
-    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out,
+        visibility 0.3s ease-in-out;
 }
 
 .questions__show {
@@ -772,12 +778,13 @@ a {
     transition: border-color 0.4s ease-in-out;
 }
 
-.questions__show::before, .questions__show::after  {
+.questions__show::before,
+.questions__show::after {
     position: absolute;
     content: "";
     width: 14px;
     height: 2px;
-    background: #161A1C;
+    background: #161a1c;
 }
 
 .questions__show::after {
@@ -818,8 +825,43 @@ a {
     background: var(--primary-color);
 }
 
+/* Atmosphere */
+.atmosphere {
+    padding: 80px 0 70px;
+    text-align: center;
+}
 
+.atmosphere__desc {
+    margin: 20px auto 0;
+    width: 528px;
+}
 
+.atmosphere__describe {
+    margin-top: 30px;
+    color: var(--primary-color);
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -1.28px;
+    text-decoration-line: underline;
+}
 
+.atmosphere__images {
+    margin-top: 70px;
+}
 
+.atmosphere__wrap-img {
+    height: 529px;
+    overflow: hidden;
+}
 
+.atmosphere-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.atmosphere-img:hover {
+    transform: scale(1.1, 1.1);
+}
