@@ -481,12 +481,13 @@ a {
     background: #fff;
 }
 
-/*  */
+/* Interactive ,Rating*/
 .info {
     padding: 140px 0 50px;
     text-align: center;
 }
 
+/* Interactive */
 .interactive__preamble {
     display: flex;
     align-items: center;
@@ -581,4 +582,115 @@ a {
     line-height: 1.66;
     text-transform: uppercase;
     background: #fff;
+    transition: bottom 0.3s ease-in-out;
+}
+
+/* Ratting */
+.rating {
+    background: #fbfaff;
+    margin-top: -314px;
+    padding: 473px 0 74px;
+    overflow: hidden;
+}
+
+.rating > .container {
+    overflow: hidden;
+}
+
+.rating__desc {
+    margin-top: 20px;
+    width: 570px;
+    margin: 0 auto;
+}
+
+.ratting__list {
+    display: flex;
+    margin-top: 60px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.ratting__item {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.rating__quote {
+    width: 679px;
+    font-size: 2.4rem;
+    margin: 0 auto;
+}
+
+.ratting__client {
+    margin-top: 36px;
+}
+
+.ratting__client-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.ratting__client-wrap-avatar {
+    width: 39.833px;
+    height: 39.833px;
+    border-radius: 50%;
+}
+
+.ratting__client-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ratting__client-name {
+    color: #080415;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.33;
+}
+
+.ratting__client-position {
+    font-size: 1.6rem;
+    line-height: 1.81;
+}
+
+.ratting__dots {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+.ratting__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #cac9d0;
+    cursor: pointer;
+}
+
+.ratting__dot:not(.ratting__dot-active):hover {
+    background: #9c98ad;
+}
+
+.ratting__dot-active {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid var(--primary-color);
+}
+
+.ratting__dot-active::before {
+    position: absolute;
+    content: "";
+    top: 3.3px;
+    left: 3.5px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
 }
