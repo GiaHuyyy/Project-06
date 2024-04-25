@@ -175,7 +175,6 @@
 @media (min-width: 576px) {
     .container {
         --spacer: 24px;
-
         max-width: 540px;
     }
 
@@ -439,7 +438,6 @@
 @media (min-width: 992px) {
     .container {
         --spacer: 30px;
-
         max-width: 960px;
     }
 

@@ -930,25 +930,14 @@ a {
 
 /* Footer */
 .footer {
-    position: relative;
-    margin-top: 50px;
-    padding-bottom: 30px;
+    margin: 50px 0 30px;
 }
 
 .footer__separator {
-    position: absolute;
-    display: inline-block;
-    bottom: 78px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1429px;
+    margin: 32px 0 18px -49px;
+    width: calc(100% + 98px);
     height: 1px;
-    margin: 0 auto 18px;
     background-color: #f1f1f2;
-}
-
-.footer__bot {
-    margin-top: 80px;
 }
 
 .footer__bot-inner {
