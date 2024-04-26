@@ -12,11 +12,11 @@ video.addEventListener("click", () => {
 });
 video.addEventListener("play", () => {
     play.style.display = "none";
-    introVideo.style.bottom = "65px";
+    introVideo.style.transform = `translateX(${110}%)`;
 });
 video.addEventListener("pause", () => {
     play.style.display = "flex";
-    introVideo.style.bottom = "10px";
+    introVideo.style.transform = `translateX(${0})`;
 });
 // Play video for btn play
 function playVideo() {
@@ -31,7 +31,7 @@ function showAttributeControls() {
     if (firstClick) {
         video.setAttribute("controls", "true");
         play.style.display = "none";
-        introVideo.style.bottom = "35px";
+        introVideo.style.transform = `translateX(${110}%)`;
         firstClick = false;
     }
 }

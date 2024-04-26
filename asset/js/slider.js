@@ -5,20 +5,6 @@ const sliderWidth = sliderItems[0].offsetWidth;
 let positionX = 0;
 let index = 0;
 
-// Update sliderWidth width when window resize
-// Hàm cập nhật kích thước của slide
-// function updateSlideWidth() {
-//     const windowWidth = window.innerWidth; // Kích thước chiều rộng của trình duyệt
-//     sliderItems.forEach((slide) => {
-//         slide.style.width = `${windowWidth}px`; // Gán chiều rộng của slide bằng kích thước chiều rộng của trình duyệt
-//     });
-// }
-
-// // Gọi hàm cập nhật kích thước slide khi tải trang và khi thay đổi kích thước trình duyệt
-// window.addEventListener("DOMContentLoaded", updateSlideWidth);
-// window.addEventListener("resize", updateSlideWidth);
-
-// Change slide auto
 function changeSlide(sliderIndex) {
     // Xóa class "ratting__dot-active" khỏi dot đang được active
     dotsItems.forEach((dot) => {
@@ -30,11 +16,26 @@ function changeSlide(sliderIndex) {
 
     // Cập nhật chỉ số và vị trí mới cho slide
     index = sliderIndex;
-    positionX = -index * sliderWidth;
+    positionX = -index * (sliderWidth); // Thêm 30px vào kích thước slide
 
     // Di chuyển tới slider tương ứng
     sliderList.style.transform = `translateX(${positionX}px)`;
 }
+
+// Function to update slide width based on container width
+function updateSlideWidth() {
+    const containerWidth = document.querySelector(".container").offsetWidth; // Lấy kích thước của phần tử có class .container
+    sliderWidth = containerWidth; 
+    sliderItems.forEach((slide) => {
+        slide.style.width = `${containerWidth}px`; // Đặt kích thước của mỗi slide bằng kích thước của phần tử có class .container
+    });
+    positionX = -index * (containerWidth); 
+    sliderList.style.transform = `translateX(${positionX}px)`; // Áp dụng transform để hiển thị slide hiện tại
+}
+
+// Gọi hàm cập nhật kích thước slide khi tải trang và khi thay đổi kích thước trình duyệt
+window.addEventListener("DOMContentLoaded", updateSlideWidth);
+window.addEventListener("resize", updateSlideWidth);
 
 // Events clicked dot
 [...dotsItems].forEach((item, sliderIndex) =>

@@ -100,7 +100,7 @@
     <body>
         <!-- Header -->
         <header class="header">
-            <div class="container">
+            <div class="container g-xl-0">
                 <div class="header__inner">
                     <!-- Header info -->
                     <div class="header__info">
@@ -131,31 +131,101 @@
                     /></a>
 
                     <!-- Nav -->
-                    <nav class="header__nav">
+                    <nav id="pc-nav" class="header__nav">
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
-                                <a href="#!" class="header__nav-link">
+                                <a href="#projects" class="header__nav-link">
                                     Projects
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#!" class="header__nav-link">
+                                <a href="#info" class="header__nav-link">
                                     Journey
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#!" class="header__nav-link">
+                                <a href="#questions" class="header__nav-link">
                                     Service
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#!" class="header__nav-link">
+                                <a href="#talk" class="header__nav-link">
                                     Contact
                                 </a>
                             </li>
                         </ul>
                     </nav>
+
+                    <!-- Nav tablet & mobile -->
+                    <label for="menu-check-box" class="header__nav-mobile-wrap">
+                        <img
+                            class="header__nav-mobile-icon"
+                            src="./asset/icons/nav-mobile-icon.svg"
+                            alt=""
+                        />
+                    </label>
                 </div>
+            </div>
+        </header>
+
+        <!-- Tablet/Mobile Header -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-check-box"
+                class="menu-check-box"
+                hidden
+            />
+            <!-- Overlay -->
+            <label
+                for="menu-check-box"
+                id="menu-overlay"
+                class="menu-overlay"
+            ></label>
+
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Header info -->
+                <div class="menu-drawer-top">
+                    <!-- Logo -->
+                    <a href="#">
+                        <img
+                            src="./asset/img/favicon-icon.png"
+                            alt=""
+                            class="header__logo-mobile"
+                    /></a>
+
+                    <!-- Header info -->
+                    <div class="header__info header__info-mobile">
+                        <a
+                            href="mailto:hi@arif.interactive"
+                            class="header__info-img"
+                        >
+                            <img
+                                src="./asset/icons/header-01.svg"
+                                alt=""
+                                class="header__info-icon"
+                            />
+                        </a>
+                        <a
+                            href="mailto:hi@arif.interactive"
+                            class="header__info-email header__info-email-mobile"
+                        >
+                            hi@arif.interactive
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <ul id="mobile-nav"></ul>
+                <script>
+                    const pcNav = document.querySelector("#pc-nav");
+                    const mobileNav = document.querySelector("#mobile-nav");
+
+                    // Copy from PC Nav => Mobile Nav
+                    mobileNav.innerHTML = pcNav.innerHTML;
+                </script>
             </div>
         </header>
 
@@ -170,6 +240,12 @@
                             src="./asset/img/hero-decor-01.svg"
                             alt=""
                             class="hero__media-decor"
+                        />
+                        <!-- Decor mobile -->
+                        <img
+                            src="./asset/img/hero-decor-mobile.svg"
+                            alt=""
+                            class="hero__media-decor-mobile"
                         />
                         <!-- Img -->
                         <figure class="hero__media-wrap-img">
@@ -277,7 +353,7 @@
             <!-- App -->
             <div class="container">
                 <section class="app">
-                    <div class="app_inner">
+                    <div class="app__inner">
                         <h3 class="section-heading app__heading">
                             Meet my recent clients
                         </h3>
@@ -433,23 +509,19 @@
                 <div class="specialties">
                     <div class="specialties__inner">
                         <!-- Row 1 -->
-                        <div class="row">
-                            <div class="col">
-                                <h2 class="section-heading specialties-heading">
-                                    Specialties
-                                </h2>
-                                <p class="section-desc specialties__desc">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. In urna, non nisl tincidunt
-                                    ut elementum turpis.
-                                </p>
-                            </div>
-                        </div>
+                        <h2 class="section-heading specialties-heading">
+                            Specialties
+                        </h2>
+                        <p class="section-desc specialties__desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. In urna, non nisl tincidunt ut elementum
+                            turpis.
+                        </p>
 
                         <!-- Row 2 -->
                         <div class="specialties__inner-list">
-                            <div class="row">
-                                <div class="col-lg-4">
+                            <div class="row specialties__row">
+                                <div class="col-lg-4 col-12">
                                     <section class="specialties__item">
                                         <div class="specialties__item-wrap-img">
                                             <img
@@ -463,7 +535,7 @@
                                                 href="#!"
                                                 class="specialties__item-title"
                                             >
-                                                Product design
+                                                Product&nbsp;design
                                             </a>
                                         </h4>
                                         <p
@@ -475,7 +547,7 @@
                                         </p>
                                     </section>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12">
                                     <section class="specialties__item">
                                         <div class="specialties__item-wrap-img">
                                             <img
@@ -489,7 +561,7 @@
                                                 href="#!"
                                                 class="specialties__item-title"
                                             >
-                                                UI/UX Design
+                                                UI/UX&nbsp;Design
                                             </a>
                                         </h4>
                                         <p
@@ -501,7 +573,7 @@
                                         </p>
                                     </section>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12">
                                     <section class="specialties__item">
                                         <div class="specialties__item-wrap-img">
                                             <img
@@ -515,7 +587,7 @@
                                                 href="#!"
                                                 class="specialties__item-title"
                                             >
-                                                Interactive design
+                                                Interactive&nbsp;design
                                             </a>
                                         </h4>
                                         <p
@@ -530,11 +602,22 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Specialties dots -->
+                    <div class="specialties__dots">
+                        <div
+                            class="specialties__dot specialties__dot-active"
+                        ></div>
+                        <div class="specialties__dot"></div>
+                        <div class="specialties__dot"></div>
+                        <div class="specialties__dot"></div>
+                        <div class="specialties__dot"></div>
+                    </div>
                 </div>
             </div>
 
             <!-- Projects -->
-            <section class="projects">
+            <section id="projects" class="projects">
                 <div class="container">
                     <div class="projects__inner">
                         <!-- Projects top -->
@@ -553,7 +636,7 @@
                         <div class="projects__list">
                             <!-- row -->
                             <div class="row projects__list-row-gap">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-12">
                                     <!-- Item 1 -->
                                     <section class="projects__item">
                                         <!-- Decor -->
@@ -593,7 +676,7 @@
                                         </figure>
                                     </section>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-12">
                                     <!-- Item 2 -->
                                     <section class="projects__item">
                                         <!-- Decor -->
@@ -633,7 +716,7 @@
                                         </figure>
                                     </section>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-12">
                                     <!-- Item 3 -->
                                     <section class="projects__item">
                                         <!-- Decor -->
@@ -673,7 +756,7 @@
                                         </figure>
                                     </section>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-12">
                                     <!-- Item 4 -->
                                     <section class="projects__item">
                                         <!-- Decor -->
@@ -727,13 +810,14 @@
             </section>
 
             <!-- Interactive, Rating -->
-            <section class="info">
+            <section id="info" class="info">
                 <div class="container">
                     <!-- Interactive -->
                     <div class="interactive">
                         <div class="interactive__preamble">
                             Hey,,,,It’s arif
                             <img
+                                class="interactive__preamble-icon"
                                 src="./asset/icons/interactive-icon.svg"
                                 alt=""
                             />
@@ -751,17 +835,17 @@
                         <div class="interactive__about">
                             <!-- Item 1 -->
                             <div class="interactive__about-item">
-                                <p class="interactive__about-num">08+</p>
+                                <p class="interactive__about-num">21+</p>
                                 <p class="interactive__about-title">
-                                    Years Experience
+                                    Features &&nbsp;Awards
                                 </p>
                             </div>
 
                             <!-- Item 2 -->
                             <div class="interactive__about-item">
-                                <p class="interactive__about-num">21+</p>
+                                <p class="interactive__about-num">08+</p>
                                 <p class="interactive__about-title">
-                                    Features & Awards
+                                    Years Experience
                                 </p>
                             </div>
 
@@ -777,6 +861,7 @@
                         <!-- Interactive video -->
                         <div class="interactive__wrap-video">
                             <video
+                                playsinline
                                 id="video"
                                 class="interactive__video"
                                 poster="./asset/thumb/thumb.jpg"
@@ -791,14 +876,14 @@
                                 title="Play"
                             >
                                 <svg
-                                    width="15"
-                                    height="18"
-                                    viewBox="0 0 15 18"
+                                    width="12"
+                                    height="14"
+                                    viewBox="0 0 12 14"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
-                                        d="M14.4462 10.6965C14.3614 10.7835 14.0414 11.1555 13.7433 11.4615C11.9956 13.386 7.43643 16.536 5.05017 17.4975C4.68777 17.652 3.77155 17.979 3.28203 18C2.81296 18 2.36581 17.892 1.93911 17.673C1.40721 17.367 0.980516 16.8855 0.746712 16.317C0.596201 15.9225 0.362397 14.742 0.362397 14.721C0.128592 13.4295 0 11.331 0 9.012C0 6.8025 0.128592 4.7895 0.320019 3.4785C0.341939 3.4575 0.575743 1.9905 0.831466 1.488C1.30054 0.57 2.21676 0 3.19727 0H3.28203C3.9206 0.0225 5.26352 0.5925 5.26352 0.6135C7.52119 1.5765 11.9752 4.572 13.7652 6.5625C13.7652 6.5625 14.2694 7.074 14.4886 7.3935C14.8305 7.8525 15 8.421 15 8.9895C15 9.624 14.8086 10.215 14.4462 10.6965Z"
+                                        d="M10.7059 8.33001C10.6471 8.39036 10.4251 8.64841 10.2183 8.86068C9.00598 10.1957 5.8433 12.3808 4.18796 13.0478C3.93657 13.155 3.301 13.3818 2.96141 13.3964C2.63602 13.3964 2.32584 13.3215 2.02984 13.1696C1.66086 12.9573 1.36487 12.6233 1.20268 12.2289C1.09827 11.9553 0.936085 11.1363 0.936085 11.1218C0.773896 10.2259 0.684692 8.77016 0.684692 7.16148C0.684692 5.62876 0.773896 4.23236 0.906688 3.32293C0.921893 3.30836 1.08408 2.29071 1.26148 1.94213C1.58687 1.30532 2.22244 0.909912 2.90262 0.909912H2.96141C3.40439 0.92552 4.33596 1.32093 4.33596 1.33549C5.90209 2.00352 8.99178 4.08148 10.2335 5.46228C10.2335 5.46228 10.5833 5.8171 10.7353 6.03874C10.9725 6.35714 11.0901 6.75151 11.0901 7.14587C11.0901 7.58602 10.9573 7.99599 10.7059 8.33001Z"
                                         fill="#5D3BEE"
                                     />
                                 </svg>
@@ -998,21 +1083,33 @@
 
                     <!-- Ratting decor -->
                     <img
-                        src="./asset/img/ratting-decor.svg"
+                        src="./asset/img/ratting-decor-01.svg"
                         alt=""
                         class="ratting__decor"
                     />
                     <img
-                        src="./asset/img/ratting-decor.svg"
+                        src="./asset/img/ratting-decor-02.svg"
                         alt=""
                         class="ratting__decor"
+                    />
+
+                    <!-- Ratting decor mobile-->
+                    <img
+                        src="./asset/img/ratting-decor-mobile-01.svg"
+                        alt=""
+                        class="ratting__decor-mobile"
+                    />
+                    <img
+                        src="./asset/img/ratting-decor-mobile-02.svg"
+                        alt=""
+                        class="ratting__decor-mobile"
                     />
                 </div>
             </section>
 
             <!-- Questions -->
             <div class="container">
-                <section class="questions">
+                <section id="questions" class="questions">
                     <div class="questions__inner">
                         <h2 class="section-heading questions__heading">
                             A few questions clients normally ask me
@@ -1154,8 +1251,8 @@
                         <!-- Atmosphere list images -->
                         <div class="atmosphere__images">
                             <!-- Row -->
-                            <div class="row">
-                                <div class="col-lg-4">
+                            <div class="row atmosphere__row">
+                                <div class="col-lg-4 col-12">
                                     <figure class="atmosphere__wrap-img">
                                         <img
                                             src="./asset/img/atmosphere-01.png"
@@ -1164,7 +1261,7 @@
                                         />
                                     </figure>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12">
                                     <figure class="atmosphere__wrap-img">
                                         <img
                                             src="./asset/img/atmosphere-02.png"
@@ -1173,7 +1270,7 @@
                                         />
                                     </figure>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12">
                                     <figure class="atmosphere__wrap-img">
                                         <img
                                             src="./asset/img/atmosphere-03.png"
@@ -1185,11 +1282,20 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Specialties dots -->
+                    <div class="atmosphere__dots">
+                        <div
+                            class="atmosphere__dot atmosphere__dot-active"
+                        ></div>
+                        <div class="atmosphere__dot"></div>
+                        <div class="atmosphere__dot"></div>
+                    </div>
                 </section>
             </div>
 
             <!-- Talk -->
-            <section class="talk">
+            <section id="talk" class="talk">
                 <div class="container">
                     <div class="talk__inner">
                         <img
@@ -1225,12 +1331,19 @@
                     alt=""
                     class="talk__decor"
                 />
+
+                <!-- Decor mobile-->
+                <img
+                    src="./asset/img/talk-decor-mobile.svg"
+                    alt=""
+                    class="talk__decor-mobile"
+                />
             </section>
         </main>
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="container">
+            <div class="container g-xl-0">
                 <div class="footer__inner">
                     <!-- Footer top -->
                     <div class="footer__top">
@@ -1264,7 +1377,7 @@
 
                         <!-- Nav -->
                         <nav class="footer__nav">
-                            <ul class="header__nav-list">
+                            <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
                                     <a href="#!" class="footer__nav-link">
                                         Projects
@@ -1290,7 +1403,7 @@
                     </div>
 
                     <!-- Footer separator -->
-            <div class="footer__separator"></div>
+                    <div class="footer__separator"></div>
 
                     <!-- Footer bottom -->
                     <div class="footer__bot">
