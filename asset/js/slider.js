@@ -16,7 +16,7 @@ function changeSlide(sliderIndex) {
 
     // Cập nhật chỉ số và vị trí mới cho slide
     index = sliderIndex;
-    positionX = -index * (sliderWidth); // Thêm 30px vào kích thước slide
+    positionX = -index * sliderWidth;
 
     // Di chuyển tới slider tương ứng
     sliderList.style.transform = `translateX(${positionX}px)`;
@@ -24,13 +24,16 @@ function changeSlide(sliderIndex) {
 
 // Function to update slide width based on container width
 function updateSlideWidth() {
-    const containerWidth = document.querySelector(".container").offsetWidth; // Lấy kích thước của phần tử có class .container
-    sliderWidth = containerWidth; 
+    // Lấy kích thước của phần tử có class .container (cha)
+    const containerWidth = document.querySelector(".container").offsetWidth;
+    sliderWidth = containerWidth;
     sliderItems.forEach((slide) => {
-        slide.style.width = `${containerWidth}px`; // Đặt kích thước của mỗi slide bằng kích thước của phần tử có class .container
+    // Đặt kích thước của mỗi slide bằng kích thước của phần tử có class .container
+        slide.style.width = `${containerWidth}px`; 
     });
-    positionX = -index * (containerWidth); 
-    sliderList.style.transform = `translateX(${positionX}px)`; // Áp dụng transform để hiển thị slide hiện tại
+    positionX = -index * containerWidth;
+    // Áp dụng transform để hiển thị slide hiện tại
+    sliderList.style.transform = `translateX(${positionX}px)`; 
 }
 
 // Gọi hàm cập nhật kích thước slide khi tải trang và khi thay đổi kích thước trình duyệt
@@ -47,7 +50,7 @@ window.addEventListener("resize", updateSlideWidth);
     })
 );
 
-// Loop animation change slide
+// Hàm chuyển slide
 function loopChangeSlide() {
     setInterval(() => {
         let nextIndex = index + 1;
@@ -58,5 +61,5 @@ function loopChangeSlide() {
     }, 2500);
 }
 
-// Start event loop animation change slide
+// Gọi vòng lặp chuyển silde
 loopChangeSlide();
