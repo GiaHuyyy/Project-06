@@ -22,13 +22,13 @@ function changeSlide(sliderIndex) {
     sliderList.style.transform = `translateX(${positionX}px)`;
 }
 
-// Function to update slide width based on container width
+// Hàm cập nhật chiều rộng của item dựa trên chiều rộng của cha
 function updateSlideWidth() {
     // Lấy kích thước của phần tử có class .container (cha)
     const containerWidth = document.querySelector(".container").offsetWidth;
     sliderWidth = containerWidth;
     sliderItems.forEach((slide) => {
-    // Đặt kích thước của mỗi slide bằng kích thước của phần tử có class .container
+    // Đặt kích thước của mỗi slide bằng kích thước của phần tử có class .container (cha)
         slide.style.width = `${containerWidth}px`; 
     });
     positionX = -index * containerWidth;
@@ -36,11 +36,12 @@ function updateSlideWidth() {
     sliderList.style.transform = `translateX(${positionX}px)`; 
 }
 
-// Gọi hàm cập nhật kích thước slide khi tải trang và khi thay đổi kích thước trình duyệt
+// Cập nhật kích thước slide khi tải trang
 window.addEventListener("DOMContentLoaded", updateSlideWidth);
+// Cập nhật kích thước slide khi thay đổi kích thước trình duyệt
 window.addEventListener("resize", updateSlideWidth);
 
-// Events clicked dot
+// Sự kiện click vào dot để chuyển slide tương ứng
 [...dotsItems].forEach((item, sliderIndex) =>
     item.addEventListener("click", function () {
         // Kiểm tra nếu dot được nhấn khác với slide hiện tại
@@ -61,5 +62,5 @@ function loopChangeSlide() {
     }, 2500);
 }
 
-// Gọi vòng lặp chuyển silde
+// Gọi vòng lặp chuyển slide
 loopChangeSlide();
