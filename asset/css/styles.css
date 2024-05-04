@@ -693,7 +693,7 @@ a {
     overflow: hidden;
 }
 
-.rating > .container {
+.rating > .rating__wrap {
     overflow: hidden;
 }
 

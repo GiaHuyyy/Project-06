@@ -446,14 +446,16 @@
     }
 }
 
-@media (min-width: 575.98px)  {
+@media (min-width: 575.98px) {
     .projects__item-decor-mobile {
         display: none;
     }
 }
 
 @media (max-width: 575.98px) {
-    .projects, .info, .talk .questions {
+    .projects,
+    .info,
+    .talk .questions {
         scroll-margin-top: 0;
     }
 
@@ -471,7 +473,6 @@
     }
 
     .header {
-
         padding: 20px 0 15px;
     }
 
@@ -660,6 +661,10 @@
     .rating__quote {
         font-size: 1.8rem;
         width: 310px;
+    }
+
+    .ratting__list {
+        margin-left: -20px;
     }
 
     .ratting__client-name {
