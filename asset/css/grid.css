@@ -436,7 +436,7 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .container {
-        --spacer: 0;
+        --spacer: 30px;
         max-width: 960px;
     }
 
